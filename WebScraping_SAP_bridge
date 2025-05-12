@@ -1,0 +1,54 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOlC7h8xZZLD7Fvv9AVZIEj",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/naznin/My_repository/blob/master/WebScraping_SAP_bridge\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "WZTRQONeoLbo"
+      },
+      "outputs": [],
+      "source": [
+        "from selenium import webdriver\n",
+        "from selenium.webdriver.common.by import By\n",
+        "\n",
+        "\n",
+        "driver = webdriver.Chrome()\n",
+        "\n",
+        "driver.get('https://selenium.dev/documentation')\n",
+        "assert 'Selenium' in driver.title\n",
+        "\n",
+        "elem = driver.find_element(By.ID, 'm-documentationwebdriver')\n",
+        "elem.click()\n",
+        "assert 'WebDriver' in driver.title\n",
+        "\n",
+        "driver.quit()"
+      ]
+    }
+  ]
+}
